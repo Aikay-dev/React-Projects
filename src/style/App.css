@@ -1,0 +1,215 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.head{
+  position: "fixed";
+  background: rgb(4, 52, 184);
+  width: "100%";
+  color: white
+}
+
+.addform{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.item{
+  background-color: rgb(77, 101, 145);
+  width: 600px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.item svg :hover{
+  color: red;
+  cursor: pointer;
+}
+
+.navbar{
+  display: flex;
+  padding: 20px 15px;
+  justify-content: space-between;
+}
+
+.youel{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.contyouel{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 60px;
+  height: 360px;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.navbut{
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.eli{
+  cursor: pointer;
+}
+
+.addlabel{
+  display: none;
+}
+
+#addItem{
+  width: 600px;
+  height: 50px;
+  border: 1px solid grey;
+  outline: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.addbutt{
+  height: 50px;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: rgb(77, 101, 145);
+  color: white;
+}
+
+.searchForm{
+  width: 600px;
+  margin: auto;
+}
+
+#search{
+  width: 100%;
+}
+
+.serviceblock{
+  height: 300px;
+  width: 300px;
+  margin: 50px auto;
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.inp{
+  height: 100px;
+  background-color: rgb(223, 223, 223);
+  margin: auto;
+  width: 100%;
+  font-size: 30px;
+  padding-left: 20px;
+  border-radius: 20px;
+  border: 1px solid black;
+  outline: none;
+}
+
+.inphold{
+  width: 500px;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.stopcontainer{
+  background-color: rgb(0, 4, 36);
+  color: white;
+  width: 500px;
+  height: 400px;
+  margin: 100px auto 0 auto;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.stopdisplay{
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.times{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.hella{
+  height: 45px;
+  width: 50px;
+  background-color: rgb(0, 4, 36);
+  border: none;
+  color: green;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.hella:hover{
+  scale: 1.08;
+}
+
+.stopinp{
+  width: 50px;
+  height: 50px;
+  outline: none;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+}
+
+.stopWbutton{
+  background-color: rgb(0, 4, 36);
+  border: none;
+  width: 100%;
+}
