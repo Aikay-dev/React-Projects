@@ -10,7 +10,7 @@ import About from "./pages/About";
 
 function App() {
   const [items, setItems] = useState(
-    JSON.parse(localStorage.getItem("shoppinglist"))
+    JSON.parse(localStorage.getItem("shoppinglist")) !== null ? JSON.parse(localStorage.getItem("shoppinglist")) : []
   );
 
   const [newItem, setNewItem] = useState("");
@@ -70,7 +70,7 @@ function App() {
         <Route path="/About" element ={<About />}/>
         <Route path="/Services" element={<Services />} />
       </Routes>
-      <Footer length={2} />
+      <Footer length={items.length} />
     </Router>
   );
 }
