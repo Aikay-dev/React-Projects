@@ -70,7 +70,7 @@ function App() {
         <Route path="/About" element ={<About />}/>
         <Route path="/Services" element={<Services />} />
       </Routes>
-      <Footer length={items.length} />
+      <Footer length={2} />
     </Router>
   );
 }
