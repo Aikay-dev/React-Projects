@@ -7,6 +7,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Services from "./pages/Services";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Contactus from "./pages/Contact-us";
+import Account from "./pages/Account";
+
 
 function App() {
   const [items, setItems] = useState(
@@ -69,6 +72,8 @@ function App() {
         />
         <Route path="/About" element ={<About />}/>
         <Route path="/Services" element={<Services />} />
+        <Route path="/Contact-us" element={<Contactus />}/>
+        <Route path="/Account" element={<Account   />}/>
       </Routes>
       <Footer length={items.length} />
     </Router>

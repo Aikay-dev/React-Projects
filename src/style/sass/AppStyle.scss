@@ -1,0 +1,77 @@
+$primary-color: rgb(42, 207, 207);
+
+
+.profContainer {
+  width: 95%;
+  height: 580px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgb(241, 241, 241);
+  border-radius: 20px;
+  position: relative;
+
+  .senprof {
+    margin-bottom: 20px;
+    color: gray;
+  }
+
+  .skcheck {
+    color: rgb(42, 207, 207);
+  }
+
+  .prof {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .profname {
+      font-weight: bold;
+      font-size: 20px;
+      color: green;
+    }
+
+    .skillimg {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+    }
+  }
+
+  .profsk {
+    margin-bottom: 20px;
+  }
+
+  .skich {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .skill {
+    background-color: $primary-color;
+    border-radius: 10px;
+    color: white;
+    font-weight: 400;
+    padding: 10px 20px;
+  }
+
+  .sptog {
+    position: absolute;
+    right: 2%;
+    height: 20px;
+    width: 40px;
+    background-color: rgb(71, 71, 71);
+    border-radius: 20px;
+    cursor: pointer;
+
+    .sptogball {
+      height: 100%;
+      width: 20px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 20px;
+      position: absolute;
+      background-color: $primary-color;
+    }
+  }
+}

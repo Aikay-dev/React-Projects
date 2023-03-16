@@ -9,6 +9,7 @@ const AddItem = ({newItem, setNewItem, handleSubmit}) => {
           <label htmlFor = "addItem" className = "addlabel">Add Item</label>
           <input 
           autoFocus
+          ref={inputRef}
           id = "addItem"
           placeholder= "Add Item"
           required

@@ -34,8 +34,12 @@ const Header = ({ title }) => {
             <li className="eli">
               <Link to = "/Services">SERVICES</Link>
             </li>
-            <li className="eli">CONTACT US</li>
-            <li className="eli">ACCOUNT</li>
+            <li className="eli">
+              <Link to = "/Contact-us">CONTACT US</Link>
+            </li>
+            <li className="eli">
+              <Link to = "/Account">ACCOUNT</Link>
+            </li>
           </ul>
           <button className="navbut" style={butstyle} onClick = {handleclick}>LOGIN</button>
         </nav>
