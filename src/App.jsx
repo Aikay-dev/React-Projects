@@ -9,8 +9,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contactus from "./pages/Contact-us";
 import Account from "./pages/Account";
+import ErrorPage from "./pages/ErrorPage";
 
 
+const NotFound = (props) => <h1>The page your looking for not found</h1>
 function App() {
   const [items, setItems] = useState(
     JSON.parse(localStorage.getItem("shoppinglist")) !== null ? JSON.parse(localStorage.getItem("shoppinglist")) : []
@@ -73,7 +75,8 @@ function App() {
         <Route path="/About" element ={<About />}/>
         <Route path="/Services" element={<Services />} />
         <Route path="/Contact-us" element={<Contactus />}/>
-        <Route path="/Account" element={<Account   />}/>
+        <Route path="/Account" element={<Account />}/>
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer length={items.length} />
     </Router>
