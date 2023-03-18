@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import AddItem from "../AddItem";
 import Content from "../content";
 import SearchItem from "../SearchItem";
+import { AppContext } from "../App";
 
-const Home = ({
-  newItem,
-  setNewItem,
-  items,
-  handleSubmit,
-  search,
-  setSearch,
-  handleCheck,
-  handleDelete
-}) => {
+
+
+const Home = () => {
+
+  const {handleDelete,
+    handleSubmit,
+    newItem,
+    setNewItem,
+    search,
+    handleCheck,
+    setSearch,
+    items,} = useContext(AppContext);
+
+
   return (
     <>
       <AddItem newItem={newItem} setNewItem={setNewItem} handleSubmit={handleSubmit} />

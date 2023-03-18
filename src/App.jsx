@@ -1,8 +1,7 @@
 import "./style/App.css";
-import Header from "./header";
 import React from "react";
-import Footer from "./footer";
-import { useState } from "react";
+import Footer from "./Components/footer";
+import { useState, createContext } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Services from "./pages/Services";
 import Home from "./pages/Home";
@@ -10,14 +9,16 @@ import About from "./pages/About";
 import Contactus from "./pages/Contact-us";
 import Account from "./pages/Account";
 import ErrorPage from "./pages/ErrorPage";
+import Header from "./Components/header";
 
+export const AppContext = createContext(null);
 
-const NotFound = (props) => <h1>The page your looking for not found</h1>
 function App() {
   const [items, setItems] = useState(
-    JSON.parse(localStorage.getItem("shoppinglist")) !== null ? JSON.parse(localStorage.getItem("shoppinglist")) : []
+    JSON.parse(localStorage.getItem("shoppinglist")) !== null
+      ? JSON.parse(localStorage.getItem("shoppinglist"))
+      : []
   );
-
   const [newItem, setNewItem] = useState("");
   const [search, setSearch] = useState("");
 
@@ -53,32 +54,31 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <Header title="emma list" />
-      </div>
-      <Routes>
-        <Route
-          path={"/"}
-          element={
-            <Home
-              handleDelete={handleDelete}
-              handleSubmit={handleSubmit}
-              newItem={newItem}
-              setNewItem={setNewItem}
-              search={search}
-              handleCheck={handleCheck}
-              setSearch={setSearch}
-              items={items}
-            />
-          }
-        />
-        <Route path="/About" element ={<About />}/>
-        <Route path="/Services" element={<Services />} />
-        <Route path="/Contact-us" element={<Contactus />}/>
-        <Route path="/Account" element={<Account />}/>
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-      <Footer length={items.length} />
+      <AppContext.Provider
+        value={{
+          handleDelete,
+          handleSubmit,
+          newItem,
+          setNewItem,
+          search,
+          handleCheck,
+          setSearch,
+          items,
+        }}
+      >
+        <div className="App">
+          <Header title="emma list" />
+        </div>
+        <Routes>
+          <Route path={"/"} element={<Home/>}/>
+          <Route path="/About" element={<About />} />
+          <Route path="/Services" element={<Services />} />
+          <Route path="/Contact-us" element={<Contactus />} />
+          <Route path="/Account" element={<Account />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+        <Footer length={items.length} />
+      </AppContext.Provider>
     </Router>
   );
 }

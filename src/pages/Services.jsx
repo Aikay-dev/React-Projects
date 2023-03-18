@@ -11,6 +11,7 @@ const Services = () => {
 
   return (
     <>
+    <div className='faker'></div>
     <Colorbox box = { box } />
     <ColorInput changeValue = {changeValue}/>
     </>

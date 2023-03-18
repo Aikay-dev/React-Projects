@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -7,17 +9,13 @@
   pointer-events: none;
 }
 
-.head{
-  position: "fixed";
-  background: rgb(4, 52, 184);
-  width: "100%";
-  color: white
-}
+
 
 .addform{
   display: flex;
   align-items: baseline;
   justify-content: center;
+  padding-top: 100px;
 }
 
 
@@ -52,10 +50,19 @@
   cursor: pointer;
 }
 
+.head{
+  position: fixed;
+  background: rgb(4, 52, 184);
+  color: white;
+  z-index: 2;
+  width: 100%;
+}
+
 .navbar{
   display: flex;
   padding: 20px 15px;
   justify-content: space-between;
+  width: 100%;
 }
 
 .youel{
@@ -157,9 +164,10 @@
   color: white;
   width: 500px;
   height: 400px;
-  margin: 100px auto 0 auto;
+  margin: auto;
   border-radius: 20px;
   padding: 10px;
+  margin-bottom: 50px;
 }
 
 .stopdisplay{
@@ -212,4 +220,9 @@
   background-color: rgb(0, 4, 36);
   border: none;
   width: 100%;
+ 
+}
+
+.faker{
+  height: 100px;
 }

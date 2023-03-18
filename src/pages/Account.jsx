@@ -63,6 +63,8 @@ const Account = () => {
   };
 
   return (
+    <>
+    <div className="faker"></div>
     <div
       className="profContainer"
       style={{ backgroundColor: styler.cardColor }}
@@ -95,6 +97,7 @@ const Account = () => {
         </p>
       </div>
     </div>
+    </>
   );
 };
 

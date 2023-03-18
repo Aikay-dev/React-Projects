@@ -5,6 +5,8 @@ import { useRef } from 'react'
 const AddItem = ({newItem, setNewItem, handleSubmit}) => {
   const inputRef = useRef();
   return (
+    <>
+    <div className='faker'></div>
     <form className='addform' onSubmit = {handleSubmit}>
           <label htmlFor = "addItem" className = "addlabel">Add Item</label>
           <input 
@@ -28,6 +30,7 @@ const AddItem = ({newItem, setNewItem, handleSubmit}) => {
         </button>
 
     </form>
+    </>
   )
 }
 

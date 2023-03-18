@@ -2,7 +2,8 @@ import ItemList from './ItemList'
 
 const contstyle = {
   height: 400,
-  width: "100%"
+  width: "100%",
+  
 }
 
 const Content = (props) => {

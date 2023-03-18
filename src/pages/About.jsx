@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import toast, { Toaster } from "react-hot-toast";
+import "../style/sass/AppStyle.scss";
 
 library.add(fas);
 
@@ -40,6 +41,8 @@ function About() {
   };
 
   return (
+    <>
+    <div className="faker"></div>
     <form className="stopcontainer">
       <Toaster />
       <div className="stopdisplay">
@@ -89,6 +92,7 @@ function About() {
           </button>
           </div>
     </form>
+    </>
   );
 }
 
