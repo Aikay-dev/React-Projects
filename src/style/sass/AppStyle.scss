@@ -88,6 +88,30 @@ $primary-color: rgb(42, 207, 207);
     width: 20%;
     overflow: hidden;
     background-color: transparent;
+
+    .contactli{
+      background-color: black;
+      height: 100px;
+      width: 95%;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: white;
+    }
+    
+    .contactui{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      margin-top: 20px;
+      overflow-y: scroll;
+      height: 80%;
+      
+    }
+    
+    .contactui::-webkit-scrollbar {
+      display: none;
+    }
   }
   
   .contactMain{
@@ -100,32 +124,11 @@ $primary-color: rgb(42, 207, 207);
     
   }
   
-  .contactli{
-    background-color: black;
-    height: 100px;
-    width: 95%;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: white;
-  }
   
-  .contactui{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    margin-top: 20px;
-    overflow-y: scroll;
-    height: 100%;
-    
-  }
-  
-  .contactui::-webkit-scrollbar {
-    display: none;
-  }
   .contacth1{
     text-align: center;
     color: white;
+    padding-top: 10px;
   }
   
   .login {
